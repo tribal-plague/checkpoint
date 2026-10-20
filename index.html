@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Checkpoint — game save backup for Windows</title>
-<meta name="description" content="Checkpoint backs up your PC game saves automatically and keeps them in step between your computers through your own Google Drive. Free for Windows.">
+<meta name="description" content="Checkpoint backs up your PC game saves automatically and keeps them in step between your computers. Sign in with Google, nothing else to set up. Free for Windows.">
 <meta name="theme-color" content="#5B67EE">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='#6C78F0'/%3E%3Cstop offset='1' stop-color='#3B45B8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='41' y='41' width='942' height='942' rx='225' fill='url%28#g%29'/%3E%3Cpath d='M752.6,424.4 A256,256 0 0 0 290.3,384 M271.4,599.6 A256,256 0 0 0 733.7,640' fill='none' stroke='#fff' stroke-width='76.8' stroke-linecap='round'/%3E%3Cpolygon points='234.6,480.4 203.5,333.9 377.1,434.1' fill='#fff'/%3E%3Cpolygon points='789.4,543.6 820.5,690.1 646.9,589.9' fill='#fff'/%3E%3Ccircle cx='512' cy='512' r='66.6' fill='#fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,8 @@
   /* ---- the one place to change when the installer is uploaded ---- */
   window.CHECKPOINT = {
     download: "https://github.com/tribal-plague/checkpoint/releases/latest/download/Checkpoint-Setup.exe",
-    version: "1.0",
-    size: "32 MB"
+    version: "1.1",
+    size: "33 MB"
   };
   (function () {           // apply the saved theme before first paint
     try { var t = localStorage.getItem("cp-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -324,7 +324,7 @@ footer a:hover { color: var(--text); }
     <div class="pill reveal"><b>Free</b> For Windows 10 &amp; 11 · Steam, Epic and GOG</div>
     <h1 class="reveal">Your progress,<br><span class="grad-text">on every PC.</span></h1>
     <p class="lede reveal">Checkpoint backs up your game saves the moment you stop playing, and keeps them in step between
-      your desktop and laptop through your own Google Drive.</p>
+      your desktop and laptop. Just sign in with Google.</p>
     <div class="cta reveal">
       <a class="btn btn-primary btn-lg js-download" href="https://github.com/tribal-plague/checkpoint/releases/latest/download/Checkpoint-Setup.exe"><svg width="18" height="18"><use href="#win"/></svg>Download for Windows</a>
       <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
@@ -353,7 +353,7 @@ footer a:hover { color: var(--text); }
           </div>
         </div>
       </div>
-      <div class="toast"><div class="ic"><svg width="18" height="18"><use href="#check"/></svg></div><div><b>Neon Drift backed up</b><span>Saved to this PC and Google Drive</span></div></div>
+      <div class="toast"><div class="ic"><svg width="18" height="18"><use href="#check"/></svg></div><div><b>Neon Drift backed up</b><span>Saved to this PC and the cloud</span></div></div>
       <div class="toast left"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8z"/><path d="M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg></div><div><b>Newer save from Laptop</b><span>Get it in one click</span></div></div>
     </div>
   </div>
@@ -377,7 +377,7 @@ footer a:hover { color: var(--text); }
         <div>
           <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/></svg></div>
           <h3>Pick up where you left off, on any PC</h3>
-          <p>Played on the laptop last night? Checkpoint shows that the newest save is in the cloud. Click
+          <p>Played on the laptop last night? Checkpoint shows you which save is the latest, this PC's or the laptop's. Click
             <b>Get latest save</b> and your progress is on this PC in seconds.</p>
         </div>
         <div class="timeline" aria-hidden="true">
@@ -389,12 +389,12 @@ footer a:hover { color: var(--text); }
       <div class="feat reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>Backs up when you quit</h3>
-        <p>Close a game and its saves are backed up a few seconds later. A scheduled backup catches anything else.</p>
+        <p>Close a game and a small progress card in the corner shows its save being backed up and uploaded. A scheduled check catches anything else.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8z"/></svg></div>
-        <h3>Your Google Drive</h3>
-        <p>Every backup is kept on your PC and in a Checkpoint folder in your own Drive. Works offline and uploads later.</p>
+        <h3>Private cloud backup</h3>
+        <p>Every backup is kept on your PC and in Checkpoint's private cloud, where only your account can reach it. Works offline and uploads later.</p>
       </div>
       <div class="feat reveal">
         <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
@@ -429,7 +429,7 @@ footer a:hover { color: var(--text); }
       <p>No accounts to create and nothing to configure.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><h3>Install and sign in</h3><p>Run the installer and sign in with Google, or use Checkpoint without an account and keep backups on this PC.</p></div>
+      <div class="step reveal"><h3>Install and sign in</h3><p>Run the installer and sign in with Google. That's the whole setup.</p></div>
       <div class="step reveal"><h3>Play like you always do</h3><p>Checkpoint finds your games and backs them up every time you quit. You don't have to remember anything.</p></div>
       <div class="step reveal"><h3>Continue on your other PC</h3><p>Install it on the laptop, sign in with the same account, and click <b>Get latest save</b> on any game.</p></div>
     </div>
@@ -442,21 +442,21 @@ footer a:hover { color: var(--text); }
     <div class="reveal">
       <div class="eyebrow">Privacy</div>
       <h2>Your saves stay yours.</h2>
-      <p>There's no Checkpoint server. Your backups go straight from your PC to your own Google Drive, and nowhere else.</p>
+      <p>Google sign-in only tells Checkpoint who you are. Your backups are stored privately, locked to your account.</p>
       <ul class="checks">
-        <li><svg width="18" height="18"><use href="#check"/></svg><span>Checkpoint can only see the files it creates. The rest of your Drive is off limits.</span></li>
-        <li><svg width="18" height="18"><use href="#check"/></svg><span>Your Google sign-in is stored encrypted, on your PC only.</span></li>
+        <li><svg width="18" height="18"><use href="#check"/></svg><span>Checkpoint never touches your Google Drive, Gmail, photos or contacts.</span></li>
+        <li><svg width="18" height="18"><use href="#check"/></svg><span>Each account can only read its own backups. Your sign-in is stored encrypted on your PC.</span></li>
         <li><svg width="18" height="18"><use href="#check"/></svg><span>No ads, analytics or tracking. Ever.</span></li>
-        <li><svg width="18" height="18"><use href="#check"/></svg><span>Revoke access any time from your Google account.</span></li>
+        <li><svg width="18" height="18"><use href="#check"/></svg><span>Sign out any time, or ask us to delete your backups.</span></li>
       </ul>
       <p style="margin-top:22px;font-size:15px"><a href="privacy.html" style="color:var(--accent);font-weight:600">Read the privacy policy →</a></p>
     </div>
     <div class="vault reveal" aria-hidden="true">
       <div class="lock"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>What Checkpoint can see</div>
-      <div class="row"><div class="ic"><svg width="16" height="16"><use href="#check"/></svg></div><b>My Drive / Checkpoint</b><span>backups it made</span></div>
+      <div class="row"><div class="ic"><svg width="16" height="16"><use href="#check"/></svg></div><b>Your game save backups</b><span>stored privately</span></div>
       <div class="row"><div class="ic"><svg width="16" height="16"><use href="#check"/></svg></div><b>Your email address</b><span>to show who's signed in</span></div>
       <div class="row no"><div class="ic">✕</div>Your photos and documents<span>never</span></div>
-      <div class="row no"><div class="ic">✕</div>Other Drive folders<span>never</span></div>
+      <div class="row no"><div class="ic">✕</div>Your Google Drive and Gmail<span>never</span></div>
     </div>
   </div>
 </section>
@@ -466,13 +466,13 @@ footer a:hover { color: var(--text); }
   <div class="wrap">
     <div class="sec-head reveal"><div class="eyebrow">FAQ</div><h2>Questions, answered.</h2></div>
     <div class="faq reveal">
-      <details><summary>Is Checkpoint free?</summary><p>Yes. Checkpoint is free, with no ads and no subscription. Backups use your own Google Drive storage, and most save files are tiny.</p></details>
+      <details><summary>Is Checkpoint free?</summary><p>Yes. Checkpoint is free, with no ads and no subscription. Most save files are tiny. Checkpoint keeps your last 5 backups of each game in the cloud, and every backup on your PC.</p></details>
       <details><summary>Which games does it work with?</summary><p>It finds games installed through Steam, Epic Games and GOG and recognises thousands of them from a community save-location database. For anything else, add the game and use Learn mode: play, save, quit, and Checkpoint works out where the saves live.</p></details>
-      <details><summary>Do I need a Google account?</summary><p>No. Choose <b>Use without signing in</b> and backups stay on your PC. You can also point Checkpoint at a folder that OneDrive or Dropbox syncs. Sign in later and your games and backups come with you.</p></details>
-      <details><summary>Can it overwrite or delete my saves?</summary><p>Checkpoint never restores without asking, refuses to restore while the game is running, and always makes a safety copy of your current saves first. Old backups it cleans up go to your Drive's trash, where Google keeps them for 30 days.</p></details>
-      <details><summary>What happens when I'm offline?</summary><p>Backups are always saved on your PC first. They upload to Google Drive automatically the next time you're online.</p></details>
-      <details><summary>Windows says “Windows protected your PC”. Is it safe?</summary><p>That message appears for new apps that haven't built up a download history with Microsoft yet. Click <b>More info</b>, then <b>Run anyway</b>. Checkpoint installs just for your Windows user, so it never asks for administrator rights.</p></details>
-      <details><summary>How do I remove it?</summary><p>Uninstall it from Windows Settings like any app. To revoke Google access, sign out in Checkpoint or visit <a href="https://myaccount.google.com/permissions">your Google account permissions</a>. Your backups stay in your Drive until you delete them.</p></details>
+      <details><summary>Do I need a Google account?</summary><p>Yes. Checkpoint uses Sign in with Google so it knows which backups are yours, on every PC. It only gets your name and email address, nothing from your Drive or Gmail.</p></details>
+      <details><summary>Can it overwrite or delete my saves?</summary><p>Checkpoint never restores without asking, refuses to restore while the game is running, and always makes a safety copy of your current saves first. It only cleans up old backups beyond the number you choose to keep.</p></details>
+      <details><summary>What happens when I'm offline?</summary><p>Backups are always saved on your PC first. They upload automatically the next time you're online.</p></details>
+      <details><summary>Windows says “Windows protected your PC”. Is it safe?</summary><p>That message appears for new apps that haven't built up a download history with Microsoft yet. Click <b>More info</b>, then <b>Run anyway</b>. Windows then asks once for permission to install Checkpoint in Program Files.</p></details>
+      <details><summary>How do I remove it?</summary><p>Uninstall it from Windows Settings like any app. Sign out in Checkpoint first if you want to remove your sign-in from the PC. To have your cloud backups deleted, email <a href="mailto:shreeshsingh690@gmail.com">shreeshsingh690@gmail.com</a>.</p></details>
     </div>
   </div>
 </section>
