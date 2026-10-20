@@ -23,43 +23,40 @@
 <main>
   <p><a href="index.html">← Checkpoint</a></p>
   <h1>Privacy Policy</h1>
-  <p class="muted">Last updated: October 12, 2026</p>
+  <p class="muted">Last updated: October 20, 2026</p>
 
-  <p>Checkpoint is a desktop app for Windows that backs up PC game save files. It runs on your computer. There is
-     no Checkpoint server: the developer does not receive, store or see any of your data.</p>
+  <p>Checkpoint is a desktop app for Windows that backs up PC game save files and keeps them in step between your
+     computers. This page explains what it stores and where.</p>
 
   <h2>Data Checkpoint uses</h2>
   <ul>
     <li><strong>Game save files</strong> on your PC, which Checkpoint copies into backup files.</li>
-    <li><strong>Your Google account email address</strong>, if you sign in with Google. It is shown in the app
-        so you know which account is in use, and used to keep each account's backups separate.</li>
-    <li><strong>Files Checkpoint creates in your Google Drive</strong>, if you sign in. Checkpoint uses the
-        <code>drive.file</code> permission, which only gives access to files and folders the app created
-        itself (the <em>Checkpoint</em> folder). It cannot read, change or delete anything else in your Drive.</li>
+    <li><strong>Your Google account's name and email address</strong>, from Sign in with Google. They identify your
+        account so your backups are kept separate from everyone else's, and are shown in the app. Checkpoint does
+        not get access to your Google Drive, Gmail, contacts or any other Google data.</li>
+    <li><strong>Small details about your PCs and games</strong>: the device name you choose (for example
+        "Desktop") and each game's name and save locations, so your other PCs know where to restore saves.</li>
   </ul>
 
   <h2>Where data is stored</h2>
   <ul>
-    <li>Backups are stored on your PC (by default in <code>Documents\Checkpoint Backups</code>) and, if you sign in,
-        in your own Google Drive.</li>
-    <li>The Google sign-in token is stored on your PC only, encrypted for your Windows user account.</li>
+    <li>Every backup is stored on your PC (by default in <code>Documents\Checkpoint Backups</code>).</li>
+    <li>When you're signed in, backups are also stored in Checkpoint's cloud storage, run on
+        <a href="https://supabase.com">Supabase</a>. Access rules allow each signed-in account to read and change only
+        its own backups. Checkpoint keeps the latest backups of each game (5 by default) and removes older ones.</li>
+    <li>Your sign-in session is stored on your PC only, encrypted for your Windows user account.</li>
   </ul>
 
   <h2>Sharing</h2>
-  <p>Checkpoint does not sell, share or transfer your data to anyone. Data goes only between your PC and your own
-     Google Drive, directly over Google's secure APIs. Checkpoint contains no ads, analytics or tracking.</p>
-
-  <h2>Google API Services User Data Policy</h2>
-  <p>Checkpoint's use of information received from Google APIs adheres to the
-     <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
-     Policy</a>, including the Limited Use requirements.</p>
+  <p>Checkpoint does not sell or share your data, and contains no ads, analytics or tracking. Data goes only between
+     your PC and Checkpoint's cloud storage over encrypted connections. As the operator, the developer could
+     technically access stored files, but does not look at them except to help you when you ask.</p>
 
   <h2>Removing your data</h2>
   <ul>
-    <li>Use <strong>Sign out</strong> in Checkpoint to remove the sign-in token from your PC.</li>
-    <li>Revoke Checkpoint's access at any time at
-        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-    <li>Delete the <em>Checkpoint</em> folder in Google Drive and the local backup folder to remove all backups.</li>
+    <li>Use <strong>Sign out</strong> in Checkpoint to remove the sign-in session from your PC.</li>
+    <li>Email the address below to have your account and all its cloud backups deleted.</li>
+    <li>Delete the local backup folder to remove the backups on your PC.</li>
   </ul>
 
   <h2>Contact</h2>
